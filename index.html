@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>KitchenBase API</title>
+</head>
+
+<body>
+    <h1>KitchenBase API</h1>
+
+    <p>
+        KitchenBase is a REST API for managing recipes, users and categories.
+    </p>
+
+    <h2>Recipe Endpoints</h2>
+
+    <h3>GET /recipes</h3>
+    <p>Get all recipes.</p>
+
+    <h3>GET /recipes/:id</h3>
+    <p>Get one recipe by its ID.</p>
+
+    <h3>POST /recipes</h3>
+    <p>Add a new recipe.</p>
+
+    <pre>
+{
+  "name": "Mushroom Soup",
+  "ingredients": "Mushroom, milk, salt",
+  "author": 1,
+  "category": 1,
+  "instructions": "Cook all ingredients together."
+}
+    </pre>
+
+    <h2>User Endpoints</h2>
+
+    <h3>GET /users</h3>
+    <p>Get all users.</p>
+
+    <h3>POST /users</h3>
+    <p>Add a new user.</p>
+
+    <pre>
+{
+  "username": "Sarah"
+}
+    </pre>
+
+    <h2>Category Endpoints</h2>
+
+    <h3>GET /categories</h3>
+    <p>Get all categories.</p>
+</body>
+
+</html>
