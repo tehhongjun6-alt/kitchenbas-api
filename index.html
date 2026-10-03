@@ -1,29 +1,126 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KitchenBase API</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 48px 20px;
+            background-color: #fff7ed;
+            color: #2d211c;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        main {
+            width: min(900px, 100%);
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+            padding: 36px;
+            border-radius: 18px;
+            background-color: #f97316;
+            color: white;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+
+        header p {
+            margin: 0;
+            color: #ffedd5;
+        }
+
+        section {
+            margin-bottom: 24px;
+            padding: 28px;
+            border: 1px solid #fed7aa;
+            border-radius: 16px;
+            background-color: white;
+            box-shadow: 0 8px 24px rgba(124, 45, 18, 0.08);
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            color: #9a3412;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            display: inline-block;
+            margin: 18px 0 4px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background-color: #ffedd5;
+            color: #c2410c;
+            font-family: Consolas, monospace;
+            font-size: 1rem;
+        }
+
+        section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        section p {
+            margin: 4px 0;
+            color: #62534b;
+        }
+
+        pre {
+            overflow-x: auto;
+            margin: 18px 0 0;
+            padding: 18px;
+            border-radius: 10px;
+            background-color: #292524;
+            color: #ffedd5;
+            font-family: Consolas, monospace;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 14px;
+            }
+
+            header,
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>KitchenBase API</h1>
+    <main>
+        <header>
+            <h1>KitchenBase API</h1>
+            <p>KitchenBase is a REST API for managing recipes, users and categories.</p>
+        </header>
 
-    <p>
-        KitchenBase is a REST API for managing recipes, users and categories.
-    </p>
+        <section>
+            <h2>Recipe Endpoints</h2>
 
-    <h2>Recipe Endpoints</h2>
+            <h3>GET /recipes</h3>
+            <p>Get all recipes.</p>
 
-    <h3>GET /recipes</h3>
-    <p>Get all recipes.</p>
+            <h3>GET /recipes/:id</h3>
+            <p>Get one recipe by its ID.</p>
 
-    <h3>GET /recipes/:id</h3>
-    <p>Get one recipe by its ID.</p>
+            <h3>POST /recipes</h3>
+            <p>Add a new recipe.</p>
 
-    <h3>POST /recipes</h3>
-    <p>Add a new recipe.</p>
-
-    <pre>
+            <pre>
 {
   "name": "Mushroom Soup",
   "ingredients": "Mushroom, milk, salt",
@@ -31,26 +128,32 @@
   "category": 1,
   "instructions": "Cook all ingredients together."
 }
-    </pre>
+            </pre>
+        </section>
 
-    <h2>User Endpoints</h2>
+        <section>
+            <h2>User Endpoints</h2>
 
-    <h3>GET /users</h3>
-    <p>Get all users.</p>
+            <h3>GET /users</h3>
+            <p>Get all users.</p>
 
-    <h3>POST /users</h3>
-    <p>Add a new user.</p>
+            <h3>POST /users</h3>
+            <p>Add a new user.</p>
 
-    <pre>
+            <pre>
 {
   "username": "Sarah"
 }
-    </pre>
+            </pre>
+        </section>
 
-    <h2>Category Endpoints</h2>
+        <section>
+            <h2>Category Endpoints</h2>
 
-    <h3>GET /categories</h3>
-    <p>Get all categories.</p>
+            <h3>GET /categories</h3>
+            <p>Get all categories.</p>
+        </section>
+    </main>
 </body>
 
 </html>
